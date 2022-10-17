@@ -5,6 +5,7 @@ import { theme } from "./theme";
 import FeedbackOptions from "./feedbackOptions/FeedbackOptions";
 import Section from "./section/Section";
 import Statistics from "./statistics/Statistics";
+import Notification from "./notification/Notification";
 
 export class App extends Component {
   static defaultProps = {
@@ -50,7 +51,7 @@ export class App extends Component {
               bad={this.state.bad} 
               total={this.countTotalFeedback()} 
               positivePercentage={this.countPositiveFeedbackPercentage()} />
-          : <span style={{marginLeft: 30, fontWeight: 500}}>No feedback given</span> }
+          : <Notification message="No feedback given" /> }
       </Section>
       </ThemeProvider>
     )

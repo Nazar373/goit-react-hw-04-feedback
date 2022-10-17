@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 export default function  FeedbackOptions({options, onLeaveFeedback}) {
  return <List>
     {options.map((option, index) => {
-      return <Item key={index}><Button onClick={() => { onLeaveFeedback(option)}}>{option}</Button></Item>
+      return <Item key={index}><Button onClick={
+        () => { onLeaveFeedback(option)}}>{option}</Button></Item>
     })}
   </List>
 }
